@@ -1,0 +1,44 @@
+<div class="min-h-screen bg-black flex items-center justify-center">
+  <div class="ml-32 mt-2 p-4 bg-gray-800 border-4 border-gray-500 rounded-md shadow-2xl text-white w-96">
+    <h1 class="text-3xl font-semibold mb-4 text-center">Calculadora IMC</h1>
+
+    <div class="mb-4">
+      <label for="nombre" class="block text-sm font-semibold mb-1">Nombre:</label>
+      <input type="text" id="nombre" [(ngModel)]="nombre" (input)="shareData()" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-gray-900 text-white" />
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-sm font-semibold mb-1">Sexo:</label>
+      <div class="flex items-center space-x-4">
+        <div class="cursor-pointer" (click)="sexo = 'masculino'; shareData()">
+          <img src="https://us.123rf.com/450wm/stalkerstudent/stalkerstudent1601/stalkerstudent160100067/50331274-icono-de-signo-masculino-bot%C3%B3n-de-sexo-masculino-c%C3%ADrculo-de-bot%C3%B3n-plano-con-sombra.jpg" class="w-16 h-16 border {{ sexo === 'masculino' ? 'border-blue-500' : 'border-none' }} rounded-full border-4" alt="Masculino">
+        </div>
+        <div class="cursor-pointer" (click)="sexo = 'femenino'; shareData()">
+          <img src="https://previews.123rf.com/images/vivilweb/vivilweb1211/vivilweb121100063/16135077-s%C3%ADmbolo-de-sexo-femenino-aislado-en-el-fondo-blanco.jpg" class="w-16 h-16 border {{ sexo === 'femenino' ? 'border-pink-500' : 'border-none' }} rounded-full border-4" alt="Femenino">
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="altura" class="block text-sm font-semibold mb-1">Altura (cm):</label>
+      <input type="" id="altura" [(ngModel)]="altura" (input)="shareData()" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-gray-900 text-white" />
+      <div class="flex items-center mt-2 space-x-2">
+        <button type="button" (click)="decreaseHeight()" class="px-4 py-2 text-white bg-blue-500 rounded-md">-</button>
+        <button type="button" (click)="increaseHeight()" class="px-4 py-2 text-white bg-blue-500 rounded-md">+</button>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="peso" class="block text-sm font-semibold mb-1">Peso (kg):</label>
+      <input type="" id="peso" [(ngModel)]="peso" (input)="shareData()" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 bg-gray-900 text-white" />
+      <div class="flex items-center mt-2 space-x-2">
+        <button type="button" (click)="decreaseWeight()" class="px-4 py-2 text-white bg-blue-500 rounded-md">-</button>
+        <button type="button" (click)="increaseWeight()" class="px-4 py-2 text-white bg-blue-500 rounded-md">+</button>
+      </div>
+    </div>
+
+    <div>
+      <button type="button" (click)="clearForm()" class="px-4 py-2 text-white bg-red-500 rounded-md">Limpiar Formulario</button>
+    </div>
+  </div>
+</div>

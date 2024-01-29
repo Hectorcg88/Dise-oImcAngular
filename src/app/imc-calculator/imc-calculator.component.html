@@ -1,0 +1,29 @@
+<!--<div class="bg-black p-4 absolute">
+  <button type="button" (click)="calcularIMC()" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800 mt-96 ml-96">
+    Calcular IMC
+  </button>
+  <div *ngIf="historial.length > 0" class="mt-4">
+    <h2 class="text-lg font-semibold text-white">Historial de IMC</h2>
+    <ul>
+      <li *ngFor="let resultado of historial" class=" text-white">
+        <span class="font-semibold">- {{ resultado.nombre }}</span> tiene un IMC de {{ resultado.imc.toFixed(2) }} y tiene {{ resultado.estado }}
+      </li>
+    </ul>
+  </div>
+</div>-->
+
+<div class="bg-black p-4 absolute">
+  
+  <button type="button" (click)="calcularIMC()" class="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
+    Calcular IMC
+  </button>
+  
+  <div *ngIf="historial.length > 0" class="mt-4">
+    <h2 class="text-lg font-semibold text-white">Historial de IMC</h2>
+    <ul>
+      <li *ngFor="let resultado of historial" class=" text-white">
+        <span class="font-semibold">- {{ resultado.nombre }}</span> tiene un IMC de {{ resultado.imc.toFixed(2) }} y tiene {{ resultado.estado }}
+      </li>
+    </ul>
+  </div>
+</div>

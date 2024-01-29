@@ -1,0 +1,8 @@
+<app-imc-calculator [formData]="formData"></app-imc-calculator>
+
+
+<app-form 
+  (formDataChanged)="updateFormData($event)" 
+><app-imc-calculator [formData]="formData"></app-imc-calculator>
+</app-form>
+
